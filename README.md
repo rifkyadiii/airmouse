@@ -20,6 +20,7 @@ Uncomment 2 baris terakhir Gesture_Controller.py
 
 python Gesture_Controller.py (Run Mouse Aja)
 
+------------------------------------------------------
 
 Bikin .exe:
 

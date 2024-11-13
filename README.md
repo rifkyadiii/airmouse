@@ -19,3 +19,11 @@ python Proton.py (Run Chatbot)
 Uncomment 2 baris terakhir Gesture_Controller.py
 
 python Gesture_Controller.py (Run Mouse Aja)
+
+
+Bikin .exe:
+
+pip install pyinstaller
+
+pyinstaller --onefile --add-data "src\\web;src\\web" src\\Proton.py
+

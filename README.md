@@ -1,6 +1,6 @@
 Python: (3.6 - 3.8.5)
 
-git clone https://github.com/xenon-19/Gesture-Controlled-Virtual-Mouse.git
+[git clone https://github.com/xenon-19/Gesture-Controlled-Virtual-Mouse.git]https://github.com/rifkyadiii/airmouse.git)
 
 conda create --name gest python=3.8.5
 

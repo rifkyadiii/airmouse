@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UDIN Bot</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}" type="image/png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <button class="info-btn" id="openInstructionsBtn">
+            <img width="22px" src="{{ url_for('static', filename='images/info.png') }}">
+        </button>
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Voice Bot Logo" class="logo">
+        </div>
+        <div class="chat-box" id="chatBox"></div>
+        <div class="chat-input">
+            <input type="text" id="Input" placeholder="Ketik perintah Anda...">
+            <button id="sendBtn">Kirim</button>
+            <button id="startVoiceBtn"><img width="17px" src="{{ url_for('static', filename='images/mic.png') }}">
+            </button>
+        </div>
+        <div class="controls">
+            <button id="startBtn">Mulai Bot</button>
+            <button id="stopBtn">Stop Bot</button>
+        </div>
+    </div>
+
+    <!-- Modal Petunjuk Penggunaan -->
+    <div class="modal" id="instructionsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Petunjuk Penggunaan Voice Bot</h2>
+                <span class="close-modal" id="closeModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <h3>Cara Menggunakan Voice Bot</h3>
+                <ol>
+                    <li>
+                        <strong>Memulai Voice Bot</strong>
+                        <p>Tekan tombol "Mulai Voice Bot" untuk mengaktifkan fitur voice recognition.</p>
+                    </li>
+                    <li>
+                        <strong>Berbicara dengan Bot</strong>
+                        <p>Setelah tombol "Mulai" ditekan, Anda dapat berbicara secara langsung ke mikrofon.</p>
+                    </li>
+                    <li>
+                        <strong>Mengirim Pesan Teks</strong>
+                        <p>Jika Anda ingin mengirim pesan secara manual, ketik pesan di kolom input dan tekan "Kirim".</p>
+                    </li>
+                    <li>
+                        <strong>Menghentikan Voice Bot</strong>
+                        <p>Tekan tombol "Hentikan Voice Bot" untuk mematikan mode voice recognition.</p>
+                    </li>
+                </ol>
+
+                <h3>Perintah yang Didukung</h3>
+                <ol>
+                    <li>
+                        <strong>Waktu dan Jam</strong>
+                        <p>Contoh perintah:</p>
+                        <ul>
+                            <li>"Berapa waktu sekarang?"</li>
+                            <li>"Jam berapa sekarang?"</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Pencarian Lokasi</strong>
+                        <p>Contoh perintah:</p>
+                        <ul>
+                            <li>"Cari peta Jakarta"</li>
+                            <li>"Cari lokasi Bundaran HI"</li>
+                            <li>"Cari maps Monas"</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Pencarian Umum</strong>
+                        <p>Contoh perintah:</p>
+                        <ul>
+                            <li>"Cari berita terkini"</li>
+                            <li>"Temukan informasi tentang cuaca"</li>
+                            <li>"Lihatkan saya restoran terdekat"</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Kontrol Volume</strong>
+                        <p>Contoh perintah:</p>
+                        <ul>
+                            <li>"Naikkan volume"</li>
+                            <li>"Turunkan volume"</li>
+                            <li>"Bisukan volume"</li>
+                            <li>"Aktifkan volume"</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Kontrol Kecerahan</strong>
+                        <p>Contoh perintah:</p>
+                        <ul>
+                            <li>"Naikkan kecerahan"</li>
+                            <li>"Turunkan brightness"</li>
+                            <li>"Naikkan lampu"</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Tangkapan Layar</strong>
+                        <p>Contoh perintah:</p>
+                        <ul>
+                            <li>"Tangkapan layar"</li>
+                            <li>"Ambil gambar layar"</li>
+                            <li>"Screenshot"</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Kontrol Gesture Recognition</strong>
+                        <p>Contoh perintah:</p>
+                        <ul>
+                            <li>"Aktifkan gesture"</li>
+                            <li>"Nyalakan mouse"</li>
+                            <li>"Matikan gesture"</li>
+                            <li>"Nonaktifkan mouse"</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Mengakhiri Voice Bot</strong>
+                        <p>Contoh perintah:</p>
+                        <ul>
+                            <li>"Keluar"</li>
+                            <li>"Selesai"</li>
+                            <li>"Berhenti"</li>
+                            <li>"Goodbye"</li>
+                            <li>"Dadah"</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

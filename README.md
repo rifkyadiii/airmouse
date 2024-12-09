@@ -1,6 +1,6 @@
-#Projek Tugas Akhir Mata Kuliah Interaksi Manusia dan Komputer
-##Semester 5 2024
+# Projek Tugas Akhir Mata Kuliah Interaksi Manusia dan Komputer
+## Semester 5 2024
 
-###Requirements
+### Requirements
 Python 3.12.7
 
